@@ -16,10 +16,12 @@ export default defineNuxtConfig({
     plugins: 'shared/plugins',
     middleware: 'app/middleware',
   },
-  
+
   components: {
     dirs:[ '~/shared/ui' ]
   },
 
   css: [ '~/app/assets/scss/main.scss' ],
-})
+  
+  modules: [ '@pinia/nuxt' ],
+});

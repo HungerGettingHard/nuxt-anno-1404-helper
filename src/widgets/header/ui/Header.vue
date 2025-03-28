@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { SideMenuButton } from '~/features/open-side-menu';
 import Navbar from './Navbar.vue';
-
 </script>
 
 <template>

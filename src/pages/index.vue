@@ -17,6 +17,8 @@ const residentsStore = useResidentsStore();
       <ResidentsForm
         :form="calculationStore.form"
         :residents="residentsStore.residents"
+        @clear="calculationStore.clearForm"
+        @submit=""
       />
     </div>
 

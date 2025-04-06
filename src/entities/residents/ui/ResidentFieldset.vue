@@ -1,9 +1,9 @@
 <script lang="ts" setup>
 import type { RadioButtonOption } from '~/shared/ui/radio-input/types';
-import type { ResidentsFormItem } from '../types';
+import type { ResidentsFieldset } from '../types';
 
 interface Props {
-  resident: ResidentsFormItem;
+  resident: ResidentsFieldset;
   residentName: string;
   residentImgSrc: string;
 }

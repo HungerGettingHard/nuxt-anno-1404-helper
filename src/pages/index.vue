@@ -1,6 +1,12 @@
 <script setup lang="ts">
-import { ResidentsForm } from '~/entities/residents-form';
+import { useResidentsStore } from '~/entities/residents';
+import {
+  ResidentsForm,
+  useCalculationStore
+} from '~/features/calculate-production';
 
+const calculationStore = useCalculationStore();
+const residentsStore = useResidentsStore();
 </script>
 
 <template>
@@ -8,7 +14,10 @@ import { ResidentsForm } from '~/entities/residents-form';
     <div class="calculator-section__inputs-wrapper">
       <h2 class="calculator-section__title">Production calculator</h2>
 
-      <ResidentsForm />
+      <ResidentsForm
+        :form="calculationStore.form"
+        :residents="residentsStore.residents"
+      />
     </div>
 
     <div class="calculator-section__outputs-wrapper">
